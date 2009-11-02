@@ -40,4 +40,5 @@ fun! perldoc#window.close()
   redraw
 endf
 
-call perldoc#window.open('App::CLI','')
+" test code
+" call perldoc#window.open('App::CLI','')

@@ -1,0 +1,17 @@
+
+INSTALLATION
+============
+
+    $ vim-packager build
+    $ make install
+
+or 
+    
+    $ cp vimlib/autoload/perldoc.vim ~/.vim/autoload/
+
+
+USAGE
+=====
+
+    call perldoc#window.open('App::CLI','')
+

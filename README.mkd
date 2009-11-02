@@ -2,11 +2,13 @@
 INSTALLATION
 ============
 
+install by VIM::Packager ( git://github.com/c9s/vim-packager.git )
+
     $ vim-packager build
     $ make install
 
 or 
-    
+
     $ cp vimlib/autoload/perldoc.vim ~/.vim/autoload/
 
 

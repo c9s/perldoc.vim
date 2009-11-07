@@ -1,9 +1,10 @@
 " &&&& Perldoc Window &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
 "=VERSION 1.0
 "
-let perldoc#window = { 'width':50 , 'height': 82 }
 
-fun! perldoc#window.open(name,param)
+let s:perldoc_window = { 'width':50 , 'height': 82 }
+
+fun! s:perldoc_window.open(name,param)
   " XXX: save size for each window
   " save window size
   let self.previous_height = winheight('%')
@@ -30,11 +31,11 @@ fun! perldoc#window.open(name,param)
   call cursor(1,1)
   exec 'resize ' . self.width
   exec 'vertical resize ' . self.height
-  autocmd BufWinLeave <buffer> call perldoc#window.close()
+  autocmd BufWinLeave <buffer> call g:perldoc_window.close()
   nmap <buffer> <ESC> <C-W>q
 endf
 
-fun! perldoc#window.close()
+fun! s:perldoc_window.close()
   bw
   exec 'vertical resize ' . self.previous_width
   exec 'resize ' . self.previous_height
@@ -42,5 +43,7 @@ fun! perldoc#window.close()
 endf
 
 fun! perldoc#use()
-  let g:perldoc = copy( perldoc#window )
+  if ! exists('g:perldoc_window')
+    let g:perldoc_window = copy( s:perldoc_window )
+  endif
 endf

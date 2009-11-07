@@ -16,7 +16,7 @@ fun! s:perldoc_window.open(name,param)
   setlocal nowrap cursorline nonumber
 
   setfiletype perldoc
-  silent file Perldoc
+  exec 'silent file Perldoc-' . a:name
 
   exec 'r !perldoc -tT ' . a:param . ' ' . a:name
 

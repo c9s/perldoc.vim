@@ -31,7 +31,7 @@ fun! s:perldoc_window.open(name,param)
   call cursor(1,1)
   exec 'resize ' . self.width
   exec 'vertical resize ' . self.height
-  autocmd BufWinLeave <buffer> call g:perldoc_window.close()
+  autocmd BufWinLeave <buffer> call g:perldoc.close()
   nmap <buffer> <ESC> <C-W>q
 endf
 
@@ -42,8 +42,8 @@ fun! s:perldoc_window.close()
   redraw
 endf
 
-fun! perldoc#use()
-  if ! exists('g:perldoc_window')
-    let g:perldoc_window = copy( s:perldoc_window )
+fun! perldoc#load()
+  if ! exists('g:perldoc')
+    let g:perldoc = copy(s:perldoc_window)
   endif
 endf

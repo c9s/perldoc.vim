@@ -15,5 +15,7 @@ or
 USAGE
 =====
 
-    call perldoc#window.open('App::CLI','')
+
+    cal perldoc#load()
+    cal g:perldoc.open('App::CLI','')
 

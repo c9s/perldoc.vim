@@ -40,3 +40,7 @@ fun! perldoc#window.close()
   exec 'resize ' . self.previous_height
   redraw
 endf
+
+fun! perldoc#use()
+  let g:perldoc = copy( perldoc#window )
+endf

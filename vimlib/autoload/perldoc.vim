@@ -1,4 +1,3 @@
-
 " &&&& Perldoc Window &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
 let perldoc#window = { 'width':50 , 'height': 82 }
 
@@ -39,6 +38,3 @@ fun! perldoc#window.close()
   exec 'resize ' . self.previous_height
   redraw
 endf
-
-" test code
-" call perldoc#window.open('App::CLI','')

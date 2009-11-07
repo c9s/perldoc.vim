@@ -1,4 +1,6 @@
 " &&&& Perldoc Window &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+"=VERSION 1.0
+"
 let perldoc#window = { 'width':50 , 'height': 82 }
 
 fun! perldoc#window.open(name,param)

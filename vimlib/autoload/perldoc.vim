@@ -1,8 +1,8 @@
 " &&&& Perldoc Window &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-"=VERSION 1.0
+"=VERSION 1.1.
 "
-
 let s:perldoc_window = { 'width':50 , 'height': 82 }
+let s:perldoc_window.version = 1.1
 
 fun! s:perldoc_window.open(name,param)
   " XXX: save size for each window
